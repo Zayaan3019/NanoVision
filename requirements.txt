@@ -1,0 +1,12 @@
+# Core runtime
+torch>=2.0.0
+numpy>=1.24
+pillow>=9.0
+tqdm>=4.65
+
+# Development / testing
+pytest>=7.4
+pytest-cov
+
+# Optional: experiment tracking
+# tensorboard>=2.13

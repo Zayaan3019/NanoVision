@@ -1,0 +1,55 @@
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1786123068.179151   43612 port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+Seed: 42 (deterministic=False)
+CLIPConfig(
+  vision = ViTConfig(img=32x32, patch=4, n_patches=64, n_layers=4, n_heads=4, d_model=96, ~0.4M params)
+  text   = TextEncoderConfig(vocab=131, seq=77, n_layers=3, d_model=96)
+  embed_dim=64, init_log_temp=2.659
+)
+TrainConfig(epochs=15, lr=0.0005, batch=128, wd=0.2)
+Train: 50,000 pairs | Test: 10,000 pairs
+[warn] TensorBoard unavailable (VersionError) - skipping TB logging
+======================================================================
+CLIP(
+  ViT | 4L x 4H x 96D | patch=4 | 0.45M params
+  TextEncoder(3L x 4H x 96D | 0.36M params)
+  embed_dim=64
+  total=0.83M params
+)
+  Total params     : 0.83 M
+  Epochs           : 15
+  Batch size       : 128
+  Device           : cpu
+======================================================================
+epoch    1/15 | lr 1.00e-04 | loss 4.6335 | temp 14.237 | zs_acc 31.80% | i2t_R@1(strict) 0.30% | i2t_R@1(class) 33.20% | 282.0s
+  >> [ckpt] Best CLIP saved (zs_acc=31.80%)
+epoch    2/15 | lr 2.00e-04 | loss 4.4231 | temp 14.191 | zs_acc 41.46% | i2t_R@1(strict) 0.40% | i2t_R@1(class) 44.20% | 284.6s
+  >> [ckpt] Best CLIP saved (zs_acc=41.46%)
+epoch    3/15 | lr 3.00e-04 | loss 4.2790 | temp 14.132 | zs_acc 48.35% | i2t_R@1(strict) 0.60% | i2t_R@1(class) 47.80% | 503.0s
+  >> [ckpt] Best CLIP saved (zs_acc=48.35%)
+epoch    4/15 | lr 4.00e-04 | loss 4.2108 | temp 14.002 | zs_acc 48.65% | i2t_R@1(strict) 0.40% | i2t_R@1(class) 47.30% | 470.9s
+  >> [ckpt] Best CLIP saved (zs_acc=48.65%)
+epoch    5/15 | lr 5.00e-04 | loss 4.1652 | temp 13.810 | zs_acc 49.67% | i2t_R@1(strict) 0.20% | i2t_R@1(class) 49.30% | 411.5s
+  >> [ckpt] Best CLIP saved (zs_acc=49.67%)
+epoch    6/15 | lr 5.00e-04 | loss 4.1119 | temp 13.615 | zs_acc 52.79% | i2t_R@1(strict) 0.50% | i2t_R@1(class) 52.30% | 380.9s
+  >> [ckpt] Best CLIP saved (zs_acc=52.79%)
+epoch    7/15 | lr 4.88e-04 | loss 4.0666 | temp 13.486 | zs_acc 53.56% | i2t_R@1(strict) 0.40% | i2t_R@1(class) 53.10% | 348.2s
+  >> [ckpt] Best CLIP saved (zs_acc=53.56%)
+epoch    8/15 | lr 4.53e-04 | loss 4.0203 | temp 13.364 | zs_acc 56.52% | i2t_R@1(strict) 0.20% | i2t_R@1(class) 56.80% | 594.3s
+  >> [ckpt] Best CLIP saved (zs_acc=56.52%)
+epoch    9/15 | lr 3.99e-04 | loss 3.9753 | temp 13.300 | zs_acc 57.57% | i2t_R@1(strict) 0.50% | i2t_R@1(class) 58.70% | 616.4s
+  >> [ckpt] Best CLIP saved (zs_acc=57.57%)
+epoch   10/15 | lr 3.31e-04 | loss 3.9315 | temp 13.261 | zs_acc 58.49% | i2t_R@1(strict) 0.60% | i2t_R@1(class) 58.70% | 425.7s
+  >> [ckpt] Best CLIP saved (zs_acc=58.49%)
+epoch   11/15 | lr 2.55e-04 | loss 3.8876 | temp 13.252 | zs_acc 60.48% | i2t_R@1(strict) 0.70% | i2t_R@1(class) 59.70% | 421.5s
+  >> [ckpt] Best CLIP saved (zs_acc=60.48%)
+epoch   12/15 | lr 1.79e-04 | loss 3.8403 | temp 13.258 | zs_acc 62.10% | i2t_R@1(strict) 0.70% | i2t_R@1(class) 61.10% | 499.2s
+  >> [ckpt] Best CLIP saved (zs_acc=62.10%)
+epoch   13/15 | lr 1.11e-04 | loss 3.8000 | temp 13.270 | zs_acc 63.10% | i2t_R@1(strict) 0.60% | i2t_R@1(class) 61.40% | 491.0s
+  >> [ckpt] Best CLIP saved (zs_acc=63.10%)
+epoch   14/15 | lr 5.68e-05 | loss 3.7734 | temp 13.283 | zs_acc 63.41% | i2t_R@1(strict) 0.40% | i2t_R@1(class) 62.50% | 521.4s
+  >> [ckpt] Best CLIP saved (zs_acc=63.41%)
+epoch   15/15 | lr 2.20e-05 | loss 3.7521 | temp 13.291 | zs_acc 64.22% | i2t_R@1(strict) 0.30% | i2t_R@1(class) 62.30% | 485.0s
+  >> [ckpt] Best CLIP saved (zs_acc=64.22%)
+======================================================================
+CLIP training complete. Best zero-shot accuracy: 64.22%

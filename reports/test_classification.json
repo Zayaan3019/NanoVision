@@ -1,0 +1,1345 @@
+[
+  {
+    "file": "test_augmentation.py",
+    "class": "TestShiftHue",
+    "name": "test_matches_colorsys_per_pixel_exactly",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestShiftHue",
+    "name": "test_grayscale_pixels_unaffected_by_hue_shift",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestToTensorNormalize",
+    "name": "test_totensor_maps_0_255_to_0_1",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestToTensorNormalize",
+    "name": "test_normalize_closed_form",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestToTensorNormalize",
+    "name": "test_normalize_denormalize_roundtrip",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestRandomCropReflect",
+    "name": "test_no_padding_no_crop_is_identity",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestRandomCropReflect",
+    "name": "test_reflect_padding_matches_manual_mirror",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestRandomCropReflect",
+    "name": "test_output_always_correct_size",
+    "category": "other",
+    "evidence": []
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestMixupPerSample",
+    "name": "test_soft_labels_are_proper_distributions",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestMixupPerSample",
+    "name": "test_lambda_identical_between_image_and_label_per_sample",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestMixupPerSample",
+    "name": "test_lambda_varies_across_batch",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_augmentation.py",
+    "class": "TestMixupPerSample",
+    "name": "test_mixed_image_shape_and_dtype",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_vocab_size",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_special_ids",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_encode_length",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_encode_has_sot_and_eot",
+    "category": "numeric",
+    "evidence": [
+      "numeric",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_encode_decode_roundtrip",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_decode_strips_specials",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_encode_truncates",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_encode_pads",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_encode_batch_shape",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_encode_batch_consistent_with_encode",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestByteTokenizer",
+    "name": "test_all_ascii_printable",
+    "category": "structural",
+    "evidence": [
+      "structural"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestTextEncoder",
+    "name": "test_output_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestTextEncoder",
+    "name": "test_output_finite",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestTextEncoder",
+    "name": "test_different_texts_different_outputs",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestTextEncoder",
+    "name": "test_padding_does_not_affect_output",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestTextEncoder",
+    "name": "test_seq_len_too_long_raises",
+    "category": "structural",
+    "evidence": [
+      "raises"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPEncoding",
+    "name": "test_encode_image_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPEncoding",
+    "name": "test_encode_text_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPEncoding",
+    "name": "test_image_embeddings_l2_normalised",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPEncoding",
+    "name": "test_text_embeddings_l2_normalised",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPEncoding",
+    "name": "test_encode_texts_from_strings_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPEncoding",
+    "name": "test_encode_texts_from_strings_normalised",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPLoss",
+    "name": "test_forward_output_types",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPLoss",
+    "name": "test_loss_is_finite",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPLoss",
+    "name": "test_loss_is_positive",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPLoss",
+    "name": "test_logits_symmetric",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPLoss",
+    "name": "test_loss_lower_for_matched_pairs",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPLoss",
+    "name": "test_batch_size_one",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestTemperature",
+    "name": "test_log_temp_initialised",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestTemperature",
+    "name": "test_log_temp_is_learnable",
+    "category": "gradient",
+    "evidence": [
+      "gradient"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestTemperature",
+    "name": "test_log_temp_clamped_in_loss",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestTemperature",
+    "name": "test_log_temp_clamped_to_zero",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestZeroShot",
+    "name": "test_output_shape_default_classes",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestZeroShot",
+    "name": "test_output_shape_custom_classes",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestZeroShot",
+    "name": "test_logits_finite",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestZeroShot",
+    "name": "test_no_grad_context",
+    "category": "gradient",
+    "evidence": [
+      "gradient"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPPresets",
+    "name": "test_tiny_preset_valid",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPPresets",
+    "name": "test_micro_preset_valid",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPPresets",
+    "name": "test_micro_preset_smaller_than_tiny",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPPresets",
+    "name": "test_micro_preset_forward_and_loss",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPOptimizer",
+    "name": "test_optimizer_type",
+    "category": "structural",
+    "evidence": [
+      "structural"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPOptimizer",
+    "name": "test_two_param_groups",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPOptimizer",
+    "name": "test_log_temp_in_no_decay",
+    "category": "structural",
+    "evidence": [
+      "structural"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPOptimizer",
+    "name": "test_all_params_covered",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPBackward",
+    "name": "test_gradients_flow",
+    "category": "gradient",
+    "evidence": [
+      "gradient",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPBackward",
+    "name": "test_log_temp_gets_gradient",
+    "category": "gradient",
+    "evidence": [
+      "gradient",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestCLIPBackward",
+    "name": "test_contrastive_loss_gradcheck",
+    "category": "gradient",
+    "evidence": [
+      "gradient"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestInfoNCEClosedForm",
+    "name": "test_loss_matches_hand_computed_value",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestInfoNCEClosedForm",
+    "name": "test_diagonal_is_the_positive_pair",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestInfoNCEClosedForm",
+    "name": "test_duplicate_positive_pair_is_stable",
+    "category": "gradient",
+    "evidence": [
+      "gradient",
+      "numeric",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_clip.py",
+    "class": "TestInfoNCEClosedForm",
+    "name": "test_two_identical_images_in_batch_end_to_end",
+    "category": "gradient",
+    "evidence": [
+      "gradient",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_cnn.py",
+    "class": "TestBaselineCNN",
+    "name": "test_output_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_cnn.py",
+    "class": "TestBaselineCNN",
+    "name": "test_output_finite",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_cnn.py",
+    "class": "TestBaselineCNN",
+    "name": "test_eval_mode_deterministic",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_cnn.py",
+    "class": "TestBaselineCNN",
+    "name": "test_gradients_flow",
+    "category": "gradient",
+    "evidence": [
+      "gradient",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_cnn.py",
+    "class": "TestBaselineCNN",
+    "name": "test_loss_decreases",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_cnn.py",
+    "class": "TestBaselineCNN",
+    "name": "test_config_roundtrip",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_cnn.py",
+    "class": "TestBaselineCNN",
+    "name": "test_count_params_matches_manual_sum",
+    "category": "numeric",
+    "evidence": [
+      "numeric",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_cnn.py",
+    "class": "TestBaselineCNN",
+    "name": "test_optimizer_two_groups_no_decay_on_bn_and_bias",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestEmbeddingIndexInit",
+    "name": "test_init_stores_embed_dim",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestEmbeddingIndexInit",
+    "name": "test_empty_index_len",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestEmbeddingIndexInit",
+    "name": "test_populated_index_len",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestEmbeddingIndexInit",
+    "name": "test_repr",
+    "category": "structural",
+    "evidence": [
+      "structural"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestQueryText",
+    "name": "test_returns_retrieval_result",
+    "category": "structural",
+    "evidence": [
+      "structural"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestQueryText",
+    "name": "test_top_k_indices_count",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestQueryText",
+    "name": "test_scores_descending",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestQueryText",
+    "name": "test_scores_in_valid_cosine_range",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestQueryText",
+    "name": "test_top_k_capped_at_n_items",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestQueryText",
+    "name": "test_labels_returned",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestQueryImage",
+    "name": "test_returns_retrieval_result",
+    "category": "structural",
+    "evidence": [
+      "structural"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestQueryImage",
+    "name": "test_scores_descending",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestQueryImage",
+    "name": "test_texts_returned",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestRecallAtK",
+    "name": "test_identity_index_recall_at_1_is_100",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestRecallAtK",
+    "name": "test_identity_index_recall_at_5_is_100",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestRecallAtK",
+    "name": "test_recall_between_0_and_100",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestRecallAtK",
+    "name": "test_recall_increases_with_k",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestRecallAtK",
+    "name": "test_t2i_direction",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestAddImage",
+    "name": "test_add_single_image_increases_count",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestAddImage",
+    "name": "test_added_image_is_normalised",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestSaveLoad",
+    "name": "test_save_and_load",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestSaveLoad",
+    "name": "test_loaded_recall_matches",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestAccuracy",
+    "name": "test_top1_all_correct",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestAccuracy",
+    "name": "test_top1_none_correct",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestAccuracy",
+    "name": "test_top5_includes_top1",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestAccuracy",
+    "name": "test_top5_returns_int",
+    "category": "structural",
+    "evidence": [
+      "structural"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestRetrievalRecall",
+    "name": "test_perfect_recall",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestRetrievalRecall",
+    "name": "test_zero_recall",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestRetrievalRecall",
+    "name": "test_recall_increases_with_k",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestMAP",
+    "name": "test_perfect_map",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_retrieval.py",
+    "class": "TestMAP",
+    "name": "test_map_between_0_and_100",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTConfig",
+    "name": "test_n_patches",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTConfig",
+    "name": "test_seq_len",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTConfig",
+    "name": "test_head_dim",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTConfig",
+    "name": "test_mlp_hidden",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTConfig",
+    "name": "test_invalid_head_count_raises",
+    "category": "structural",
+    "evidence": [
+      "raises"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTConfig",
+    "name": "test_invalid_patch_size_raises",
+    "category": "structural",
+    "evidence": [
+      "raises"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTConfig",
+    "name": "test_presets_valid",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTConfig",
+    "name": "test_serialisation_roundtrip",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestPatchEmbedding",
+    "name": "test_output_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestPatchEmbedding",
+    "name": "test_single_sample",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTForward",
+    "name": "test_logits_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTForward",
+    "name": "test_forward_features_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTForward",
+    "name": "test_return_features_flag",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTForward",
+    "name": "test_batch_size_one",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTForward",
+    "name": "test_batch_size_16",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTForward",
+    "name": "test_output_is_finite",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTForward",
+    "name": "test_eval_mode_deterministic",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestViTForward",
+    "name": "test_train_eval_differ_with_dropout",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestNonCausalAttention",
+    "name": "test_attention_is_not_causal",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestDropPath",
+    "name": "test_identity_at_eval",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestDropPath",
+    "name": "test_identity_at_zero_prob",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestDropPath",
+    "name": "test_stochastic_during_training",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestWeightInit",
+    "name": "test_head_bias_zero",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestWeightInit",
+    "name": "test_ln_f_weight_one",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestWeightInit",
+    "name": "test_ln_f_bias_zero",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestWeightInit",
+    "name": "test_cls_token_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestWeightInit",
+    "name": "test_pos_embed_shape",
+    "category": "shape-only",
+    "evidence": [
+      "shape"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestOptimizerConfig",
+    "name": "test_optimizer_type",
+    "category": "structural",
+    "evidence": [
+      "structural"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestOptimizerConfig",
+    "name": "test_two_param_groups",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestOptimizerConfig",
+    "name": "test_weight_decay_applied_correctly",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestOptimizerConfig",
+    "name": "test_pos_embed_in_no_decay",
+    "category": "structural",
+    "evidence": [
+      "structural"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestOptimizerConfig",
+    "name": "test_all_params_covered",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestOptimizerConfig",
+    "name": "test_count_params",
+    "category": "numeric",
+    "evidence": [
+      "numeric",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestOptimizerConfig",
+    "name": "test_count_params_non_embedding",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestBackward",
+    "name": "test_gradients_flow",
+    "category": "gradient",
+    "evidence": [
+      "gradient",
+      "structural"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestBackward",
+    "name": "test_loss_decreases",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestGradcheck",
+    "name": "test_self_attention_gradcheck",
+    "category": "gradient",
+    "evidence": [
+      "gradient"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestGradcheck",
+    "name": "test_patch_embedding_gradcheck",
+    "category": "gradient",
+    "evidence": [
+      "gradient"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestGradcheck",
+    "name": "test_full_vit_block_gradcheck",
+    "category": "gradient",
+    "evidence": [
+      "gradient"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestPatchEmbeddingEquivalence",
+    "name": "test_conv2d_equals_manual_unfold_linear",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestPatchEmbeddingEquivalence",
+    "name": "test_stride_equals_patch_size",
+    "category": "other",
+    "evidence": []
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestPatchEmbeddingEquivalence",
+    "name": "test_sequence_length_includes_cls",
+    "category": "numeric",
+    "evidence": [
+      "shape",
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestDropPathExpectation",
+    "name": "test_expectation_preserved_by_inverse_scaling",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  },
+  {
+    "file": "test_vit.py",
+    "class": "TestDropPathExpectation",
+    "name": "test_survival_rate_matches_keep_prob",
+    "category": "numeric",
+    "evidence": [
+      "numeric"
+    ]
+  }
+]
