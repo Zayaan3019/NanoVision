@@ -69,10 +69,18 @@ Zero-Shot Top-1 Accuracy  : 64.22%
 Zero-Shot Top-5 Accuracy  : 96.87%
 
          strict (index)    class-aware
-  R@1              0.3%          62.3%
-  R@5              2.3%          62.3%
-  R@10             5.6%          62.3%
+  R@1              0.8%          62.3%
+  R@5              3.6%          62.3%
+  R@10             6.8%          62.3%
 ```
+
+Strict recall is scored **tie-aware**: identical captions give identical scores,
+and which of the tied items `topk` returns is an implementation detail that
+changed between PyTorch versions (the same checkpoint gave strict R@1 0.3% on
+the original run and 0.7% on PyTorch 2.13). A query whose correct item is tied
+now counts as the probability it would make the top K under uniformly random
+tie-breaking, so the number is deterministic; with no ties it equals plain
+`topk` recall. Class-aware recall and zero-shot accuracy were unaffected.
 
 (R@1==R@5==R@10 under class-aware scoring is explained in `MODEL_CARD.md` §3
 — it's a verified consequence of only 10 unique captions existing in the

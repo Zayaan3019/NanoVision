@@ -87,16 +87,24 @@ architecture; reproduce it on a GPU with the command in `RESULTS.md`.
 |---|---|
 | Zero-shot Top-1 | **64.22%** |
 | Zero-shot Top-5 | **96.87%** |
-| R@1 (i2t, strict index) | 0.3% |
+| R@1 (i2t, strict index) | 0.8% |
 | R@1 (i2t, class-aware) | **62.3%** |
-| R@5 (i2t, strict index) | 2.3% |
+| R@5 (i2t, strict index) | 3.6% |
 | R@5 (i2t, class-aware) | 62.3% |
-| R@10 (i2t, strict index) | 5.6% |
+| R@10 (i2t, strict index) | 6.8% |
 | R@10 (i2t, class-aware) | 62.3% |
+
+Strict recall is scored **tie-aware**: identical captions give identical scores,
+and which of the tied items `topk` returns is an implementation detail that
+changed between PyTorch versions (the same checkpoint gave strict R@1 0.3% on
+the original run and 0.7% on PyTorch 2.13). A query whose correct item is tied
+now counts as the probability it would make the top K under uniformly random
+tie-breaking, so the number is deterministic; with no ties it equals plain
+`topk` recall. Class-aware recall and zero-shot accuracy were unaffected.
 
 **Two things jump out, and both are explained, not swept under the rug:**
 
-1. **Strict recall stays near-random (0.3-5.6%) for all 15 epochs of
+1. **Strict recall stays near-random (0.8-6.8% at the end) for all 15 epochs of
    training**, even as the loss drops from 4.63 to 3.75 and zero-shot
    accuracy climbs from 31.8% to 64.2% — i.e. strict recall is essentially
    *uninformative* about whether the model is learning anything, on this

@@ -182,10 +182,18 @@ Measured impact on the CLIP-Micro checkpoint trained as part of this audit
 
 ```
          strict (index)    class-aware
-  R@1              0.3%          62.3%
-  R@5              2.3%          62.3%
-  R@10             5.6%          62.3%
+  R@1              0.8%          62.3%
+  R@5              3.6%          62.3%
+  R@10             6.8%          62.3%
 ```
+
+Strict recall is scored **tie-aware**: identical captions give identical scores,
+and which of the tied items `topk` returns is an implementation detail that
+changed between PyTorch versions (the same checkpoint gave strict R@1 0.3% on
+the original run and 0.7% on PyTorch 2.13). A query whose correct item is tied
+now counts as the probability it would make the top K under uniformly random
+tie-breaking, so the number is deterministic; with no ties it equals plain
+`topk` recall. Class-aware recall and zero-shot accuracy were unaffected.
 
 Strict recall stayed pinned near-random (0.2-0.7%) for **all 15 epochs**,
 even as training loss dropped 4.63->3.75 and zero-shot accuracy climbed
@@ -236,7 +244,7 @@ command each, per §5). Summary:
   epochs as part of this audit (CPU compute budget — the `tiny` preset
   measured ~28 min/epoch on this machine, infeasible to train to
   completion here; see §5 below). **Result: 64.22% zero-shot
-  top-1 / 96.87% top-5; R@1 0.3% strict / 62.3% class-aware.** Full
+  top-1 / 96.87% top-5; R@1 0.8% strict (tie-aware) / 62.3% class-aware.** Full
   breakdown and the R@1==R@5==R@10 explanation in `MODEL_CARD.md` §3.
 - **CNN baseline**: 1.65M params (matched to ViT-Tiny), 12 epochs:
   **87.96% top-1 / 99.37% top-5** — beats ViT-Tiny's 83.68%/98.86% despite

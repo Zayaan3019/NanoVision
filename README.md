@@ -248,7 +248,7 @@ explanation (a broken ViT).
 |--------|-------|
 | Zero-Shot Top-1 | **64.22%** |
 | Zero-Shot Top-5 | **96.87%** |
-| R@1 (i2t, strict index) | 0.3% |
+| R@1 (i2t, strict index, tie-aware) | 0.8% |
 | R@1 (i2t, class-aware) | **62.3%** |
 
 Strict and class-aware recall disagree by >60 points here — see

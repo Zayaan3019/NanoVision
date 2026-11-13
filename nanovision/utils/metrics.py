@@ -47,15 +47,29 @@ def retrieval_recall(
         sim: (N, N) similarity matrix (higher = more similar).
         k:   Recall threshold.
 
+    Ties: when several items share the correct item's score (e.g. identical
+    captions), which of them `topk` returns is an implementation detail that
+    changes between PyTorch versions. So a query whose correct item is tied
+    counts as the probability it would land in the top K if ties were broken
+    uniformly at random. With no ties this equals the plain `topk` hit rate.
+
     Returns:
         Recall@K as a percentage (0–100).
     """
+    return strict_recall_tie_aware(sim, k)
+
+
+def strict_recall_tie_aware(sim: torch.Tensor, k: int) -> float:
+    """Diagonal Recall@K, with ties at the correct item's score broken uniformly
+    at random (in expectation), so the result does not depend on `topk`'s
+    tie order. Returns a percentage."""
     N = sim.shape[0]
-    k = min(k, N)
-    _, top_indices = sim.topk(k, dim=-1)    # (N, k)
-    gt   = torch.arange(N, device=sim.device).unsqueeze(1)   # (N, 1)
-    hits = (top_indices == gt).any(dim=-1).float()
-    return hits.mean().item() * 100.0
+    k = min(k, sim.shape[1])
+    own = sim.diagonal().unsqueeze(1)                    # (N, 1) correct item's score
+    above = (sim > own).sum(dim=1).float()               # items strictly better
+    tied = (sim == own).sum(dim=1).float()               # items tied with it, itself included
+    p_hit = ((k - above) / tied).clamp(0.0, 1.0)         # P(correct item in top K)
+    return p_hit[:N].mean().item() * 100.0
 
 
 def retrieval_recall_class_aware(

@@ -279,12 +279,10 @@ class EmbeddingIndex:
             from nanovision.utils.metrics import retrieval_recall_class_aware
             return retrieval_recall_class_aware(sim, self.labels, self.labels, k)
 
-        N = sim.shape[0]
-        k = min(k, N)
-        _, top_indices = sim.topk(k, dim=-1)    # (N, k)
-        gt = torch.arange(N).unsqueeze(1)       # (N, 1)
-        hits = (top_indices == gt).any(dim=-1).float()
-        return hits.mean().item() * 100.0
+        # Tie-aware: identical captions give identical scores, and which tied
+        # item `topk` returns differs between PyTorch versions.
+        from nanovision.utils.metrics import strict_recall_tie_aware
+        return strict_recall_tie_aware(sim, k)
 
     # ------------------------------------------------------------------
     # Persistence
