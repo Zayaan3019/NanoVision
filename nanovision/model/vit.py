@@ -180,8 +180,9 @@ class Block(nn.Module):
     """
     Pre-norm Transformer encoder block.
 
-    Pre-norm (LN before each sub-layer) is more stable at depth than
-    ViT's original post-norm formulation and is the modern standard.
+    Pre-norm (LN before each sub-layer), as in the original ViT
+    (Dosovitskiy et al., 2021, eqs. 2-3). It is more stable at depth than
+    the post-norm ordering of the original Transformer.
     """
 
     def __init__(self, config: ViTConfig, drop_path_rate: float = 0.0) -> None:
